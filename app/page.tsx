@@ -68,7 +68,7 @@ export default function Home() {
       <div className="w-full space-y-2 max-w-7xl mx-auto">
 
         <h1 className="w-full text-4xl sm:text-4xl font-bold flex-wrap items-center justify-center text-center sm:text-center max-w-4xl mx-auto">
-        One platform to manage all compliance activites:</h1>
+        One platform to manage all compliance activities:</h1>
         <p className="max-w-4xl justify-center text-center align-middle mx-auto">
           AI agents extract data from manufacturing systems to generate and maintain compliance documentation.
         </p>

@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
       </div>
-      <Separator className="space-y-2"/>
+   {/*    <Separator className="space-y-2"/>
       
       <div className="w-full space-y-2 max-w-7xl mx-auto">
 
@@ -80,16 +80,15 @@ export default function Home() {
                       <ItemHeader>
                         <ItemTitle className= "text-2xl text-center">{services.title}</ItemTitle>
                       </ItemHeader>
-                      {/* <ItemMedia>
+                      <ItemMedia>
                         <BadgeCheckIcon className="size-5" />
-                      </ItemMedia> */}
-                      {/* <ItemContent>
+                      </ItemMedia>
+                      <ItemContent>
                         {services.content}
-                      </ItemContent> */}
+                      </ItemContent>
                     </Item>
-
                   ))}
-              </div>
+              </div> */}
 
       <Separator/>
 

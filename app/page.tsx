@@ -92,7 +92,7 @@ export default function Home() {
 
       <Separator/>
 
-      <div className="w-full grid grid-flow-col grid grid-col-2 gap-8  max-w-7xl mx-auto">
+      <div className="w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-2 gap-8  max-w-7xl mx-auto">
         <h1 className="col-start-1 text-4xl sm:text-4xl font-bold flex-wrap items-left justify-left text-left sm:text-left max-w-3xl">
         Why Parallel.OS?</h1>
         <div>

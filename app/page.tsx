@@ -80,12 +80,12 @@ export default function Home() {
                       <ItemHeader>
                         <ItemTitle className= "text-2xl text-center">{services.title}</ItemTitle>
                       </ItemHeader>
-                      <ItemMedia>
+                      {/* <ItemMedia>
                         <BadgeCheckIcon className="size-5" />
-                      </ItemMedia>
-                      <ItemContent>
+                      </ItemMedia> */}
+                      {/* <ItemContent>
                         {services.content}
-                      </ItemContent>
+                      </ItemContent> */}
                     </Item>
 
                   ))}

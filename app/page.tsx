@@ -39,7 +39,7 @@ export default function Home() {
       <div className="grid grid-col-2 w-full space-y-10 space-x-20 max-w-7xl mx-auto">
             <div className="col-1 w-full space-y-8">
               <h1 className="w-full text-4xl sm:text-5xl font-bold flex-wrap items-left justify-left text-left sm:text-left max-w-3xl">
-              Compliance automation<br/><span className="underline underline-offset-3 decoration-6 decoration-blue-400 dark:decoration-blue-600">built for SMBs</span></h1>
+              Compliance automation<br/><span className="underline underline-offset-3 decoration-6 decoration-blue-400 dark:decoration-blue-600">built for manufacturers</span></h1>
 
               <p className="max-w-xl justify-center text-justify align-middle">
                 We automate compliance so you can focus on what matters most: <br/>building <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">trust</span>, delivering <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">quality</span>, and growing your <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">business</span>

@@ -16,7 +16,6 @@ const standards = [
   { id: 1, title: "ISO 9001"},
   { id: 2, title: "ASME NQA-1"},
   { id: 3, title: "AS 9100"},
-  { id: 4, title: "NADCAP"},
   { id: 5, title: "IATF 16949"},
   { id: 6, title: "ISO 29001"},
 ];

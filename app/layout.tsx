@@ -59,7 +59,7 @@ function Menu() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Button asChild variant="outline_blue">
-              <Link href="/contact">Join a Pilot</Link>
+              <Link href="contact@parallelos.co">Join a Pilot</Link>
             </Button>
           </NavigationMenuLink>
         </NavigationMenuItem>

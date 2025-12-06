@@ -52,7 +52,7 @@ export default function Home() {
                 Parallel OS is the operating system to help SMB manufacturers automate workflows to reduce costs, grow revenue and build trust.
               </p>
               <Button asChild size = "lg" variant="outline_blue" className="mt-6">
-                <Link href="/contact">Join a Pilot</Link>
+                <Link href="contact@parallelos.co">Join a Pilot</Link>
               </Button>
             </div>
       </div>
@@ -105,7 +105,7 @@ export default function Home() {
       <div className="grid mb-8 mt-8 md:mb-12 lg:grid-cols-2">
           <figure className="flex flex-col bg-gray-200 p-8 rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">
             <div className="mt-6 flex justify-center">
-              <img src="/examples2.svg" alt="Examples" />
+              <img src="/examples.svg" alt="Examples" />
             </div>
           </figure>
           <figure className="flex flex-col bg-gray-100 justify-center p-8 text-center rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">

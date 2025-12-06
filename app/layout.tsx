@@ -14,6 +14,8 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 
+import { Button } from "@/components/ui/button"
+
 export const metadata: Metadata = {
   title: "Parallel.OS",
   description: "compliance automation built for manufacturers",
@@ -21,13 +23,11 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <Link href="/" className="hover:underline hover:underline-offset-4">
-          <h1>Parallel.OS</h1>
-        </Link>
-      </div>
-    </header>
+    <div>
+      <Link href="/" className="hover:underline hover:underline-offset-4">
+        <h1 className="ibm">Parallel OS</h1>
+      </Link>
+    </div>
   );
 }
 
@@ -54,16 +54,18 @@ function ListItem({
 
 function Menu() {
   return(
-    <NavigationMenu viewport={false} className="max-w-5xl px-4 sm:px-6 lg:px-8 py-4">
-      <NavigationMenuList>
-        <NavigationMenuItem >
-          <NavigationMenuLink asChild className="hover:underline hover:underline-offset-4">
-            <Link href="/team">Team</Link>
+    <NavigationMenu viewport={false} className="w-full">
+      <NavigationMenuList className="flex justify-center items-center space-x-6">
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link href="/team" className="hover:underline hover:underline-offset-4">Team</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className="hover:underline hover:underline-offset-4">
-            <Link href="/contact">Contact</Link>
+          <NavigationMenuLink asChild>
+            <Button asChild variant="outline_blue">
+              <Link href="/contact">Join a Pilot</Link>
+            </Button>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -96,14 +98,17 @@ export default function RootLayout({children,}: Readonly<{
   children: React.ReactNode;}>) {
   return (
     <html lang="en">
-      <body className={`${ibm.className} antialiased`}>
-        <div className="flex justify-between">
-          <div><Header /></div>
-          {/* <div><Menu/></div> */}
-        </div>
-        {children}
-        <Footer />
-      </body>
+      <link rel="shortcut icon" href="/favicon.png"></link>
+        <body className={`${ibm.className} antialiased`}>
+          <header className="sticky top-0 z-50 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm border-b">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+              <div className="flex-shrink-0"><Header/></div>
+              <div><Menu/></div>
+            </div>
+          </header>
+          {children}
+          <Footer />
+        </body>
     </html>
   );
 }

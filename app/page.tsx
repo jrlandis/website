@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator"
 import { BadgeCheckIcon } from "lucide-react"
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import {
   Item,
@@ -11,6 +12,15 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item"
+
+import { 
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent
+} from "@/components/ui/card"
 
 const standards = [
   { id: 1, title: "ISO 9001"},
@@ -34,81 +44,34 @@ export default function Home() {
     <div className="bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)
                   grid grid-flow-col grid-rows-1 gap-4 items-start justify-items-center min-h-screen p-8 pb-20 sm:p-20">
     <main className="w-8/10 flex flex-col flex-wrap gap-[64px] row-start-1 items-start">
-      
-      <div className="grid grid-col-2 w-full space-y-10 space-x-20 max-w-7xl mx-auto">
-            <div className="col-1 w-full space-y-8">
-              <h1 className="w-full text-4xl sm:text-5xl font-bold flex-wrap items-left justify-left text-left sm:text-left max-w-3xl">
-              Compliance automation<br/><span className="underline underline-offset-3 decoration-6 decoration-blue-400 dark:decoration-blue-600">built for manufacturers</span></h1>
-
-              <p className="max-w-xl justify-center text-justify align-middle">
-                We automate compliance so you can focus on what matters most: <br/>building <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">trust</span>, delivering <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">quality</span>, and growing your <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">business</span>
+      <div className="w-full space-y-10 space-x-20 max-w-7xl mx-auto">
+            <div className="w-full space-y-8 flex-wrap items-center justify-center text-center sm:text-center">
+              <h1 className="text-4xl mt-24 space-x-20 md:text-6xl lg:text-7xl">
+                 Automation for<br/>Manufacturing Ops </h1>
+              <p className="max-w-150 md:text-md lg:text-xl mx-auto text-center">
+                Parallel OS is the operating system to help SMB manufacturers automate workflows to reduce costs, grow revenue and build trust.
               </p>
+              <Button asChild size = "lg" variant="outline_blue" className="mt-6">
+                <Link href="/contact">Join a Pilot</Link>
+              </Button>
             </div>
-      
-            <div className="col-1 w-full space-y-10 space-x-4">
-              <div className="gap-4 space-y-2 space-x-10" >
-                <div className="col-span-6 space-y-2 p-4">
-                  <h3 className="text-lg leading-none font-large">Built for industry <span className="underline underline-offset-3 decoration-2 decoration-blue-400 dark:decoration-blue-600">quality</span> standards:</h3>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                  {standards.map((standards) => (
-                    <Item variant="outline" className = "bg-white shadow-sm p-2" key={standards.id}>
-                      <ItemHeader>
-                        <ItemContent className="text-center">{standards.title}</ItemContent>
-                      </ItemHeader>
-                    </Item>
-                  ))}
-              </div>
-            </div>
-          </div>
-      </div>
-   {/*    <Separator className="space-y-2"/>
-      
-      <div className="w-full space-y-2 max-w-7xl mx-auto">
-
-        <h1 className="w-full text-4xl sm:text-4xl font-bold flex-wrap items-center justify-center text-center sm:text-center max-w-4xl mx-auto">
-        One platform to manage all compliance activities:</h1>
-        <p className="max-w-4xl justify-center text-center align-middle mx-auto">
-          AI agents extract data from manufacturing systems to generate and maintain compliance documentation.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto my-w-2xl max-w-5xl">
-                  {services.map((services) => (
-                    <Item variant="outline" className = "bg-white p-4 w-full shadow-md" key={services.id}>
-                      <ItemHeader>
-                        <ItemTitle className= "text-2xl text-center">{services.title}</ItemTitle>
-                      </ItemHeader>
-                      <ItemMedia>
-                        <BadgeCheckIcon className="size-5" />
-                      </ItemMedia>
-                      <ItemContent>
-                        {services.content}
-                      </ItemContent>
-                    </Item>
-                  ))}
-              </div> */}
+      <Separator className="my-4" />
 
-      <Separator/>
-
-      <div className="w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-2 gap-8  max-w-7xl mx-auto">
-        <h1 className="col-start-1 text-4xl sm:text-4xl font-bold flex-wrap items-left justify-left text-left sm:text-left max-w-3xl">
-        Why Parallel.OS?</h1>
-        <div>
+   <div className="w-full mt-8 grid grid-col-1 md:grid-cols-3 lg:grid-cols-3 gap-8  max-w-7xl mx-auto">
           <div className="space-y-4">
             <h3 className="text-lg leading-none font-large">Ready out-of-the-box</h3>
             <p className="text-muted-foreground text-sm">
               Built to work on top of your existing systems <br/> no extensive setup or configuration needed.
             </p>
           </div>
-          <Separator className="my-4" />
                     <div className="space-y-4">
             <h3 className="text-lg leading-none font-large">Transparent Pricing</h3>
             <p className="text-muted-foreground text-sm">
               No hidden fees or surprise costs - pricing that aligns <br/> with the value we add to your business
             </p>
           </div>
-          <Separator className="my-4" />
                     <div className="space-y-4">
             <h3 className="text-lg leading-none font-large">Built by Manufacturers</h3>
             <p className="text-muted-foreground text-sm">
@@ -116,21 +79,42 @@ export default function Home() {
             </p>
           </div>
         </div>
-        </div>
-        <Separator className="my-4" />
-        
-        <div className="w-full max-w-7xl mx-auto">
+<Separator className="my-4" />
+      
+      <div className="w-full space-y-10 space-x-20 max-w-7xl mx-auto">
+          <div className="w-full space-y-8 flex-wrap items-center justify-center text-center sm:text-center">
+            <h1 className="text-2xl mt-18 space-x-20 md:text-2xl lg:text-4xl">
+              One integrated platform <br/>to manage all worklfows</h1>
+              <div className="grid mb-8 mt-24 md:mb-12 lg:grid-cols-2">
+                    <figure className="flex flex-col bg-gray-100 justify-center p-8 rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">
+                      <h3 className="text-3xl text-left pl-8">Knowledge Assistant</h3>
+                      <p className="text-muted-foreground text-left text-md m-w-1/3 pl-8 pt-8">
+                        Spend less time finding and analyzing internal data. Access all of your company data from one centralized platform with natural language.
+                      </p>
+                    </figure>
+                    <figure className="flex flex-col bg-gray-200 p-8 rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">
+                    
+                      <div className="mt-6 flex md: flex-1 justify-center">
+                        <img src="/assistant2.svg" alt="Assistant"  />
+                      </div>
+                    
+                    </figure>
+              </div>
+          </div>
 
-        <h1 className="w-full text-4xl sm:text-4xl font-bold flex-wrap items-center justify-center text-center sm:text-center max-w-4xl mx-auto">
-        Join a pilot!</h1>
-        <p className="max-w-4xl justify-center text-center align-middle mx-auto">
-          Become an early partner and help us shape the future <br/> of compliance at SMB manufacturers.
-        </p>
-        <div className="flex justify-center mt-6">
-            <Button asChild variant="outline">
-              <a href="mailto:contact@parallelos.co">Contact Us</a>
-            </Button>
-        </div>
+      <div className="grid mb-8 mt-8 md:mb-12 lg:grid-cols-2">
+          <figure className="flex flex-col bg-gray-200 p-8 rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">
+            <div className="mt-6 flex justify-center">
+              <img src="/examples2.svg" alt="Examples" />
+            </div>
+          </figure>
+          <figure className="flex flex-col bg-gray-100 justify-center p-8 text-center rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">
+            <h3 className="text-3xl text-left pl-8 items-left">Workflow Automation</h3>
+            <p className="text-muted-foreground text-left text-md pl-8 pt-8 m-w-1/3 items-left">
+              Create custom automations to manage your existing workflows: from compliance and quality to production planning and cost estimation. 
+            </p>
+          </figure>
+      </div>
       </div>
       </main>
     </div>

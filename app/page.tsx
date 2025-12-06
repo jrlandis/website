@@ -52,7 +52,7 @@ export default function Home() {
                 Parallel OS is the operating system to help SMB manufacturers automate workflows to reduce costs, grow revenue and build trust.
               </p>
               <Button asChild size = "lg" variant="outline_blue" className="mt-6">
-                <Link href="contact@parallelos.co">Join a Pilot</Link>
+                <Link href="mailto:contact@parallelos.co">Join a Pilot</Link>
               </Button>
             </div>
       </div>

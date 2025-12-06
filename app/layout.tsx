@@ -58,11 +58,6 @@ function Menu() {
       <NavigationMenuList className="flex justify-center items-center space-x-6">
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href="/team" className="hover:underline hover:underline-offset-4">Team</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
             <Button asChild variant="outline_blue">
               <Link href="/contact">Join a Pilot</Link>
             </Button>
